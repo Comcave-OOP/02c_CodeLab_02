@@ -8,17 +8,16 @@ public class App {
         Mitarbeiter mitarbeiter2 = new Mitarbeiter("Schmidt", "Peter", "Buchhaltung", 1995);
         Mitarbeiter mitarbeiter3 = new Mitarbeiter("Jung", "Tobias", "Lager", 2022);
 
-        output(mitarbeiter1.getInfo("#name"));
-        output(mitarbeiter1.getInfo("#role"));
-        output(mitarbeiter1.getInfo("#entry"));
+        pollMitarbeiter(mitarbeiter1);
+        pollMitarbeiter(mitarbeiter2);
+        pollMitarbeiter(mitarbeiter3);
+    }
+
+    private static void pollMitarbeiter(Mitarbeiter ma){
+        output(ma.getInfo("#name"));
+        output(ma.getInfo("#role"));
+        output(ma.getInfo("#entry"));
         output("------------------");
-        output(mitarbeiter2.getInfo("#name"));
-        output(mitarbeiter2.getInfo("#role"));
-        output(mitarbeiter2.getInfo("#entry"));
-        output("------------------");
-        output(mitarbeiter3.getInfo("#name"));
-        output(mitarbeiter3.getInfo("#role"));
-        output(mitarbeiter3.getInfo("#entry"));
     }
 
     private static void output(String outputStr) {
